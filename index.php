@@ -1,9 +1,24 @@
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-<title>Ben</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body>
-ZDit is een mooie test
+<h1 class="text-3xl font-bold underline text-clifford">
+    Hello world! test
+</h1>
 </body>
-
 </html>
