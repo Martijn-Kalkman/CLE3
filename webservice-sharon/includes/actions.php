@@ -2,33 +2,33 @@
 /**
  * @return array
  */
-function getDishes()
+function getReviews()
 {
     return [
         [
             "id" => 1,
-            "name" => "Pizza",
-            "kitchen" => "Italian",
+            "name" => "Bob",
+            "stars" => "2",
         ],
         [
             "id" => 2,
-            "name" => "Kale",
-            "kitchen" => "Dutch",
+            "name" => "Hannah",
+            "stars" => "Dutch",
         ],
         [
             "id" => 3,
-            "name" => "Lasagna",
-            "kitchen" => "Italian",
+            "name" => "Bert",
+            "stars" => "Italian",
         ],
         [
             "id" => 4,
             "name" => "Kebab",
-            "kitchen" => "Turkish",
+            "stars" => "Turkish",
         ],
         [
             "id" => 5,
             "name" => "Paella",
-            "kitchen" => "Spanish",
+            "stars" => "Spanish",
         ]
     ];
 }
