@@ -32,13 +32,10 @@
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="flex flex-colmt-4 md:flex-row md:space-x-8 md:mt-0 md:font-medium md:bg-white">
                 <li>
-                    <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded text-decoration-line: none; decoration">About</a>
+                    <a href="reisplannen.php" class="block py-2 pl-3 pr-4 text-gray-700 rounded text-decoration-line: none; decoration">Reis Plannen</a>
                 </li>
                 <li>
-                    <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded text-decoration-line: none; decoration">Services</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded md:border-0 decoration">Pricing</a>
+                    <a href="contact.php" class="block py-2 pl-3 pr-4 text-gray-700 rounded text-decoration-line: none; decoration">Contact</a>
                 </li>
                 <li>
                     <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded"><i class="fa-regular fa-moon fa-lg decoration"></i></a>

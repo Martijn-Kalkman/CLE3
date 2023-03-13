@@ -50,7 +50,11 @@
         </div>
         <div class="flex flex-row flex-wrap justify-between items-center mt-40 w-8/12 mx-auto border-b-4 border-black pb-16">
             <div class="w-96">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus dolorum minus nostrum obcaecati voluptate! Eveniet accusantium temporibus tempore animi libero soluta maxime doloremque ullam, ratione magnam beatae distinctio vitae aliquid labore ipsa autem, rerum debitis illum consequatur nesciunt quos. Officiis.</p>
+                <p>Deze applicatie helpt rolstoelgebruikers om te controleren of een station toegankelijk is voor een rolstoel. Na uitgebreid onderzoek en eigen
+                    ervaringen zijn wij erachter gekomen dat het een veelvoorkomend probleem is dat een station online als rolstoeltoegankelijk staat maar het op
+                    locatie toch niet blijkt te zijn. Ook om te zien dat rolstoelgebruikers uren bezig zijn met het plannen van de reis, wij vinden dat dit anders
+                    moet en hopen via deze website te kunnen helpen. Als u feedback heeft of graag iets wilt toevoegen, stuur ons een bericht via
+                    ons <a class = "hyperlink" href="contact.php">contactformulier</a>!</p>
             </div>
             <div class="">
                 <img class="mx-auto " src="https://picsum.photos/seed/picsum/600/300" alt="" srcset="">
@@ -64,25 +68,31 @@
                 <img class="mx-auto " src="https://picsum.photos/seed/picsum/600/300" alt="" srcset="">
             </div>
             <div class="w-96">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus dolorum minus nostrum obcaecati voluptate! Eveniet accusantium temporibus tempore animi libero soluta maxime doloremque ullam, ratione magnam beatae distinctio vitae aliquid labore ipsa autem, rerum debitis illum consequatur nesciunt quos. Officiis.</p>
+                <h1><strong>Over ons</strong></h1>
+                <p>Wij zijn vier studenten op de opleiding Creative Media & Game Technologies op de hogeschool van Rotterdam. Kijk hieronder om ons te leren
+                kennen!</p>
             </div>
         </div>
         <div class="flex flex-row flex-wrap justify-between w-8/12 mx-auto mt-40">
             <div class="flex flex-col">
                 <img class="mx-auto rounded-full animate__pulse animate__animated g " src="https://picsum.photos/seed/picsum/200/200" alt="" srcset="">
-                <p class="w-64 text-center mt-12">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia fugiat et, doloribus voluptatum iure asperiores earum nemo totam quo! Praesentium impedit saepe possimus illum, quas sint nostrum inventore nulla sed?</p>
+                <h1>Thimo</h1>
+                <p class="w-64 text-center mt-12">Ik ben Thimo.</p>
             </div>
             <div class="flex flex-col">
                 <img class="mx-auto rounded-full animate__pulse animate__animated g" src="https://picsum.photos/seed/picsum/200/200" alt="" srcset="">
-                <p class="w-64 text-center mt-12">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia fugiat et, doloribus voluptatum iure asperiores earum nemo totam quo! Praesentium impedit saepe possimus illum, quas sint nostrum inventore nulla sed?</p>
+                <h1>Calvin</h1>
+                <p class="w-64 text-center mt-12">Ik ben Calvin.</p>
             </div>
             <div class="flex flex-col">
                 <img class="mx-auto rounded-full animate__pulse animate__animated g" src="https://picsum.photos/seed/picsum/200/200" alt="" srcset="">
-                <p class="w-64 text-center mt-12">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia fugiat et, doloribus voluptatum iure asperiores earum nemo totam quo! Praesentium impedit saepe possimus illum, quas sint nostrum inventore nulla sed?</p>
+                <h1>Martijn</h1>
+                <p class="w-64 text-center mt-12">Ik ben Martijn.</p>
             </div>
             <div class="flex flex-col">
                 <img class="mx-auto rounded-full animate__pulse animate__animated g" src="https://picsum.photos/seed/picsum/200/200" alt="" srcset="">
-                <p class="w-64 text-center mt-12">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia fugiat et, doloribus voluptatum iure asperiores earum nemo totam quo! Praesentium impedit saepe possimus illum, quas sint nostrum inventore nulla sed?</p>
+                <h1>Sharon</h1>
+                <p class="w-64 text-center mt-12">Hi! Ik ben Sharon en ik ben 20 jaar oud.</p>
             </div>
         </div>
     </main>

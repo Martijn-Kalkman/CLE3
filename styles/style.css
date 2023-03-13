@@ -3,6 +3,9 @@
  height: 6vh;
 }
 
+.hyperlink {
+    color: blue;
+}
 header {
     position: relative;
     height: 70vh;
