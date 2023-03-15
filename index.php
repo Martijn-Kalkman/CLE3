@@ -54,7 +54,9 @@
                     ervaringen zijn wij erachter gekomen dat het een veelvoorkomend probleem is dat een station online als rolstoeltoegankelijk staat maar het op
                     locatie toch niet blijkt te zijn. Ook om te zien dat rolstoelgebruikers uren bezig zijn met het plannen van de reis, wij vinden dat dit anders
                     moet en hopen via deze website te kunnen helpen. Als u feedback heeft of graag iets wilt toevoegen, stuur ons een bericht via
-                    ons <a class = "hyperlink" href="contact.php">contactformulier</a>!</p>
+                    ons <a class = "hyperlink" href="contact.php">contactformulier</a>!
+                    <a href="webservice-sharon/reviews.php">reviews</a>
+                </p>
             </div>
             <div class="">
                 <img class="mx-auto " src="https://picsum.photos/seed/picsum/600/300" alt="" srcset="">

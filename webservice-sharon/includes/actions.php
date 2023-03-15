@@ -13,22 +13,22 @@ function getReviews()
         [
             "id" => 2,
             "name" => "Hannah",
-            "stars" => "Dutch",
+            "stars" => "1",
         ],
         [
             "id" => 3,
             "name" => "Bert",
-            "stars" => "Italian",
+            "stars" => "3",
         ],
         [
             "id" => 4,
-            "name" => "Kebab",
-            "stars" => "Turkish",
+            "name" => "Sandra",
+            "stars" => "2",
         ],
         [
             "id" => 5,
-            "name" => "Paella",
-            "stars" => "Spanish",
+            "name" => "Belle",
+            "stars" => "1",
         ]
     ];
 }
@@ -37,28 +37,28 @@ function getReviews()
  * @param $id
  * @return mixed
  */
-function getDishDetails($id)
+function getReviewDetails($id)
 {
     $tags = [
         1 => [
-            "recipe" => "Put it in the oven and go!",
-            "tags" => ['cheese', 'oven']
+            "feedback" => "De lift werkt 9/10 keren niet, ik raad zeker niet aan om gebruik te maken van dit station.",
+            "tags" => ['lift', 'afgeraden']
         ],
         2 => [
-            "recipe" => "You can make this delicious Dutch meal by ...",
-            "tags" => ['unox', 'healthy', 'stamppot', 'boerenkool']
+            "feedback" => "De lift (als hij al werkt) stinkt enorm naar urine.",
+            "tags" => ['lift', 'afgeraden']
         ],
         3 => [
-            "recipe" => "Very nice when your grandma prepares this meal",
-            "tags" => ['omnomnom']
+            "feedback" => "Vaak werkt de lift niet maar gelukkig zijn er twee.",
+            "tags" => ['lift'],
         ],
         4 => [
-            "recipe" => "Everytime in the city after midnight",
-            "tags" => ['kapsalon', 'tasty', 'meat']
+            "feedback" => "Er lopen weinig werknemers rond om te helpen mocht het nodig zijn.",
+            "tags" => ['werknemers', 'afgeraden']
         ],
         5 => [
-            "recipe" => "Specialty when on holiday in Spain",
-            "tags" => ['fish']
+            "feedback" => "Er zit een stoeptegel los waardoor ik het station niet op kom.",
+            "tags" => ['stoeptegel', 'afgeraden']
         ],
     ];
 
