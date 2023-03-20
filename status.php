@@ -13,12 +13,12 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/style.css">
     <link
-            rel="stylesheet"
-            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+        rel="stylesheet"
+        href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
     <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <title>Hello, world!!!</title>
 </head>
@@ -29,18 +29,7 @@
     <path d="M1440.59 475.597C1475.63 888.507 1078.69 867.195 0.871216 950.28V0.898692C523.745 128.959 1405.54 62.6862 1440.59 475.597Z" fill="#49A078" />
 </svg>
 <main class="absolute z-20 w-full">
-    <div class="flex flex-row flex-wrap justify-between items-center mt-40 w-8/12 mx-auto border-b-4 border-black pb-16">
-        <div class="w-96">
-            <p>Deze applicatie helpt rolstoelgebruikers om te controleren of een station toegankelijk is voor een rolstoel. Na uitgebreid onderzoek en eigen
-                ervaringen zijn wij erachter gekomen dat het een veelvoorkomend probleem is dat een station online als rolstoeltoegankelijk staat maar het op
-                locatie toch niet blijkt te zijn. Ook om te zien dat rolstoelgebruikers uren bezig zijn met het plannen van de reis, wij vinden dat dit anders
-                moet en hopen via deze website te kunnen helpen. Als u feedback heeft of graag iets wilt toevoegen, stuur ons een bericht via
-                ons <a class = "hyperlink" href="contact.php">contactformulier</a>!</p>
-        </div>
-        <div class="">
-            <img class="mx-auto " src="https://picsum.photos/seed/picsum/600/300" alt="" srcset="">
-        </div>
-    </div>
+
 </main>
 <footer>
 

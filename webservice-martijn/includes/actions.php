@@ -7,8 +7,11 @@ function getDishes()
     return [
         [
             "id" => 1,
-            "name" => "Pizza",
-            "kitchen" => "Italian",
+            "elevator_height" => "5 Meter",
+            "status" => "Werkend",
+            "closed" => "gesloten tot 15 maart 2023",
+            "accessibility" => "Geschikt voor mensen met rolstoel",
+            "specifics" => "Geen bijzonderheden"
         ],
         [
             "id" => 2,
