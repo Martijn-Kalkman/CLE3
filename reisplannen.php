@@ -20,6 +20,8 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="./javascript/map.js"></script>
     <title>Hello, world!!!</title>
 </head>
 
@@ -29,6 +31,13 @@
     <path d="M1440.59 475.597C1475.63 888.507 1078.69 867.195 0.871216 950.28V0.898692C523.745 128.959 1405.54 62.6862 1440.59 475.597Z" fill="#49A078" />
 </svg>
 <main class="absolute z-20 w-full">
+
+<div id="map"></div>
+
 </main>
+<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
 </body>
 </html>
