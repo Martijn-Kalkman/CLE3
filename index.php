@@ -97,10 +97,10 @@
                 <p class="w-64 text-center mt-12">Hi! Ik ben Sharon en ik ben 20 jaar oud.</p>
             </div>
         </div>
-    </main>
-    <footer>
+        <?php require_once('components/footer.php'); ?>
 
-    </footer>
+    </main>
+
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -121,6 +121,7 @@
         },
       });
     </script>
+
 </body>
 
 </html>
