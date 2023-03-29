@@ -20,6 +20,8 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="./javascript/map.js"></script>
     <title>Hello, world!!!</title>
 </head>
 
@@ -29,6 +31,16 @@
     <path d="M1440.59 475.597C1475.63 888.507 1078.69 867.195 0.871216 950.28V0.898692C523.745 128.959 1405.54 62.6862 1440.59 475.597Z" fill="#49A078" />
 </svg>
 <main class="absolute z-20 w-full">
+<<<<<<< HEAD
+
+<div id="map"></div>
+
+</main>
+<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
+=======
     <div class="flex flex-row flex-wrap justify-between items-center mt-40 w-8/12 mx-auto border-b-4 border-black pb-16">
         <div class="w-96">
             <p>Deze applicatie helpt rolstoelgebruikers om te controleren of een station toegankelijk is voor een rolstoel. Na uitgebreid onderzoek en eigen
@@ -65,6 +77,7 @@
         },
     });
 </script>
+>>>>>>> 30cff382bdccb076ff94caa89293bc8eb4186742
 </body>
 
 </html>

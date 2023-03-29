@@ -1,42 +1,46 @@
 
 
 <?php
+
+
+
 /**
  * @return array
  */
 function getReviews()
 {
 
+    $data = [
+        "results" => [
+            [
+                "id" => 1,
+                "name" => "Bob",
+                "rating" => 2,
+            ],
+            [
+                "id" => 2,
+                "name" => "Hannah",
+                "rating" => 1,
+            ],
+            [
+                "id" => 3,
+                "name" => "Bert",
+                "rating" => 3,
+            ],
+            [
+                "id" => 4,
+                "name" => "Sandra",
+                "rating" => 2,
+            ],
+            [
+                "id" => 5,
+                "name" => "Belle",
+                "rating" => 1,
+            ]
+        ]
+    ];
 
-    return [
-         [
-            {
-                id: 1,
-                name: "Bob",
-                rating: 2,
-            },
-            {
-                id: 2,
-                name: "Hannah",
-                rating: 1,
-            },
-            {
-                id: 3,
-                name: "Bert",
-                rating: 3,
-            },
-            {
-                id: 4,
-                name: "Sandra",
-                rating: 2,
-            },
-            {
-                id: 5,
-                name: "Belle",
-                rating: 1,
-            }
-        ],
-    ]
+    return $data;
 }
 
 /**
