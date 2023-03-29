@@ -40,7 +40,7 @@
 <!--    <input type="text" id="tags">-->
 <!--  </form>-->
   <!--voorgaande reviews simpel-->
-    <div class="allreviews">
+    <div class="all-reviews">
 
     </div>
 <!--                                             review hoe ik het eruit wil laten zien-->
