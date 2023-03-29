@@ -8,63 +8,60 @@ let allReviews = document.getElementById('all-reviews');
 function init()
 {
     seeReviews();
+    ajaxRequest(apiUrl, createReviewCards());
 }
 
-// Function to get the hardcoded reviews from the array
-function seeReviews(){
-    fetch(apiUrl)
+//Function for fetching the API
+function ajaxRequest(){
+    fetch(url)
         .then((response) => {
             if(!response.ok){
                 throw new Error(response.statusText);
             }
             return response.json();
         })
-        .then(createReviewCards)
+        .then(succesHandler)
         .catch(ajaxErrorHandler);
 }
 
+// Function create a card with a review of a person
 function createReviewCards(data) {
-
     for (let review of data) {
         console.log(review);
         let div = document.createElement('div');
         div.classList.add('review-card');
         div.dataset.name = review.name;
+
         allReviews.appendChild(div);
 
-        // let name = document.createElement('li');
-        // name.classList.add('reviewname');
-        // name.innerText = review.name;
-        // div.appendChild(name);
-        //
-        // let stars = document.createElement('li');
-        // stars.classList.add('rating');
-        // stars.innerText = review.rating;
-        // div.appendChild(stars);
-
-
-
-
-        fetch(review.url)
-            .then((response) => {
-                if(!response.ok){
-                    throw new Error(response.statusText);
-                }
-                return response.json();
-            })
-            .then(fillReviews)
-            .catch(ajaxErrorHandler);
-
-        console.log(review.id);
+        ajaxRequest(review.url, fillReviews);
     }
 }
 
-function fillReviews(data){
-    let description = document.createElement('li');
-    description.classList.add('reviewdescription');
-    description.innerText = review.feedback;
-    div.appendChild(description);
-    console.log(data);
+//Function write the name and rating from the array
+function fillReviews(review){
+    let div = document.querySelector(`.review-card[data-name='${review.name}']`);
+
+    let name = document.createElement('h3');
+    name.classList.add('reviewname');
+    name.innerText = review.name;
+    div.appendChild(name);
+
+    let rating = document.createElement('div');
+    rating.classList.add('rating');
+    rating.innerText = review.rating;
+    div.appendChild(rating);
+
+    let button = document.createElement('button');
+    button.classList.add('seemore');
+    button.innerText = 'See more';
+    div.appendChild(button);
+
+    // let description = document.createElement('li');
+    // description.classList.add('reviewdescription');
+    // description.innerText = review.feedback;
+    // div.appendChild(description);
+    // console.log(data);
 }
 
 
