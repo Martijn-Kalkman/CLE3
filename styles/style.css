@@ -28,3 +28,11 @@ header {
 .decoration:hover{
     text-decoration: none;
 }
+
+.bg-custom{
+    background-color: #003554;
+}
+
+/*footer{*/
+/*    height: 20px;*/
+/*}*/

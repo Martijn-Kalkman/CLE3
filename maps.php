@@ -80,7 +80,40 @@
                 {
                     'type': 'Feature',
                     'properties': {
-                        'message': 'Baz',
+                        'message': 'Bar',
+                        'iconSize': [25, 25]
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [4.432773517203808, 51.91334239729775]
+                    }
+                },
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'message': 'Bar',
+                        'iconSize': [25, 25]
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [4.445779396945856, 51.91007949415251]
+                    }
+                },
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'message': 'Bar',
+                        'iconSize': [25, 25]
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [4.458221806731108, 51.90930392963557]
+                    }
+                },
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'message': 'Baz1',
                         'iconSize': [25, 25]
                     },
                     'geometry': {
@@ -91,7 +124,7 @@
                 {
                     'type': 'Feature',
                     'properties': {
-                        'message': 'Baz',
+                        'message': 'Baz2',
                         'iconSize': [25, 25]
                     },
                     'geometry': {
@@ -102,18 +135,7 @@
                 {
                     'type': 'Feature',
                     'properties': {
-                        'message': 'Baz',
-                        'iconSize': [25, 25]
-                    },
-                    'geometry': {
-                        'type': 'Point',
-                        'coordinates': [4.47795255587643, 51.923384653357225]
-                    }
-                },
-                {
-                    'type': 'Feature',
-                    'properties': {
-                        'message': 'Baz',
+                        'message': 'Baz4',
                         'iconSize': [25, 25]
                     },
                     'geometry': {
@@ -124,47 +146,114 @@
                 {
                     'type': 'Feature',
                     'properties': {
-                        'message': 'Baz',
+                        'message': 'Baz9',
                         'iconSize': [25, 25]
                     },
                     'geometry': {
                         'type': 'Point',
-                        'coordinates': [4.47795255587643, 51.923384653357225]
+                        'coordinates': [4.496567525284764, 51.92309172396853]
                     }
                 },
                 {
                     'type': 'Feature',
                     'properties': {
-                        'message': 'Baz',
+                        'message': 'Baz10',
                         'iconSize': [25, 25]
                     },
                     'geometry': {
                         'type': 'Point',
-                        'coordinates': [4.47795255587643, 51.923384653357225]
+                        'coordinates': [4.458247259936562, 51.930510661598284]
                     }
                 },
                 {
                     'type': 'Feature',
                     'properties': {
-                        'message': 'Baz',
+                        'message': 'Baz11',
                         'iconSize': [25, 25]
                     },
                     'geometry': {
                         'type': 'Point',
-                        'coordinates': [4.47795255587643, 51.923384653357225]
+                        'coordinates': [4.470050713984024, 51.92391693754955]
                     }
                 },
                 {
                     'type': 'Feature',
                     'properties': {
-                        'message': 'Baz',
+                        'message': 'tram1',
                         'iconSize': [25, 25]
                     },
                     'geometry': {
                         'type': 'Point',
-                        'coordinates': [4.47795255587643, 51.923384653357225]
+                        'coordinates': [4.480619549433688, 51.91865445218559]
                     }
                 },
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'message': 'tram2',
+                        'iconSize': [25, 25]
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [4.478320133811918, 51.923267873572975]
+                    }
+                },
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'message': 'tram3',
+                        'iconSize': [25, 25]
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [4.478320133811918, 51.923267873572975]
+                    }
+                },
+                                {
+                    'type': 'Feature',
+                    'properties': {
+                        'message': 'tram4',
+                        'iconSize': [25, 25]
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [4.478320133811918, 51.923267873572975]
+                    }
+                },
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'message': 'tram5',
+                        'iconSize': [25, 25]
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [4.478320133811918, 51.923267873572975]
+                    }
+                },
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'message': 'tram6',
+                        'iconSize': [25, 25]
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [4.478320133811918, 51.923267873572975]
+                    }
+                },
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'message': 'tram7',
+                        'iconSize': [25, 25]
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [4.478320133811918, 51.923267873572975]
+                    }
+                },
+                
             ]
         };
 
@@ -178,26 +267,26 @@
 
 
         // Add markers to the map.
-for (const marker of geojson.features) {
-// Create a DOM element for each marker.
-const el = document.createElement('div');
-const width = marker.properties.iconSize[0];
-const height = marker.properties.iconSize[1];
-el.className = 'marker';
-el.style.backgroundImage = `url(https://placekitten.com/g/${width}/${height}/)`;
-el.style.width = `${width}px`;
-el.style.height = `${height}px`;
-el.style.backgroundSize = '100%';
- 
-el.addEventListener('click', () => {
-window.alert(marker.properties.message);
-});
- 
-// Add markers to the map.
-new mapboxgl.Marker(el)
-.setLngLat(marker.geometry.coordinates)
-.addTo(map);
-}
+        for (const marker of geojson.features) {
+            // Create a DOM element for each marker.
+            const el = document.createElement('div');
+            const width = marker.properties.iconSize[0];
+            const height = marker.properties.iconSize[1];
+            el.className = 'marker';
+            el.style.backgroundImage = `url(https://placekitten.com/g/${width}/${height}/)`;
+            el.style.width = `${width}px`;
+            el.style.height = `${height}px`;
+            el.style.backgroundSize = '100%';
+
+            el.addEventListener('click', () => {
+                window.alert(marker.properties.message);
+            });
+
+            // Add markers to the map.
+            new mapboxgl.Marker(el)
+                .setLngLat(marker.geometry.coordinates)
+                .addTo(map);
+        }
     </script>
 </body>
 

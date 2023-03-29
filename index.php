@@ -55,7 +55,7 @@
                     locatie toch niet blijkt te zijn. Ook om te zien dat rolstoelgebruikers uren bezig zijn met het plannen van de reis, wij vinden dat dit anders
                     moet en hopen via deze website te kunnen helpen. Als u feedback heeft of graag iets wilt toevoegen, stuur ons een bericht via
                     ons <a class = "hyperlink" href="contact.php">contactformulier</a>!
-                    <a href="webservice-sharon/reviews.php">reviews</a>
+                    <a href="webservice-sharon/index.php">reviews</a>
                 </p>
             </div>
             <div class="">
@@ -97,10 +97,10 @@
                 <p class="w-64 text-center mt-12">Hi! Ik ben Sharon en ik ben 20 jaar oud.</p>
             </div>
         </div>
-    </main>
-    <footer>
+        <?php require_once('components/footer.php'); ?>
 
-    </footer>
+    </main>
+
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -121,6 +121,7 @@
         },
       });
     </script>
+
 </body>
 
 </html>
