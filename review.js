@@ -20,8 +20,8 @@ function seeReviews(){
 
 function displayReviews(data){
     console.log(data);
-    console.log(data.id);
-    console.log(data.name);
+    // console.log(data.rating);
+    // console.log(data.name);
     for (let review of data.results) {
 
         let div = document.createElement('div');
