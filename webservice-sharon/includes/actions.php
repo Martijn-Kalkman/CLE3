@@ -11,6 +11,7 @@ function getReviews()
 {
 
     $data = [
+        "count" => 5,
         "results" => [
             [
                 "id" => 1,
@@ -74,3 +75,5 @@ function getReviewDetails($id)
 
     return $tags[$id];
 }
+
+
