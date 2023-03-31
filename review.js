@@ -40,39 +40,39 @@ function createReviewCards(data) {
     for (let review of data.results) {
         console.log(data);
         let div = document.createElement('div');
-        div.classList.add('review-card');
+        div.classList.add('review-card', 'max-w-sm', 'p-6', 'bg-white', 'border', 'border-gray-200', 'rounded-lg', 'shadow', 'dark:bg-gray-700', 'dark:border-gray-700');
         div.dataset.name = review.name;
 
 
         let name = document.createElement('h2');
-        name.classList.add('text-3xl', 'font-bold', 'dark:text-black');
+        name.classList.add('mb-2', 'text-2xl', 'font-bold', 'tracking-tight', 'text-gray-900', 'dark:text-white');
         name.innerText = review.name;
         div.appendChild(name);
 
 
         if (review.rating === 1){
           let stars = document.createElement('span');
-           stars.classList.add('fa', 'fa-star', 'checked', 'allstars');
+           stars.classList.add('fa', 'fa-star', 'checked');
             div.appendChild(stars);
         }
 
         if (review.rating === 2){
             let stars = document.createElement('span');
-            stars.classList.add('fa', 'fa-star', 'checked', 'allstars');
+            stars.classList.add('fa', 'fa-star', 'checked');
             div.appendChild(stars.cloneNode(true));
             div.appendChild(stars.cloneNode(true));
         }
 
         if (review.rating === 3){
             let stars = document.createElement('span');
-            stars.classList.add('fa', 'fa-star', 'checked', 'allstars');
+            stars.classList.add('fa', 'fa-star', 'checked');
             div.appendChild(stars.cloneNode(true));
             div.appendChild(stars.cloneNode(true));
             div.appendChild(stars.cloneNode(true));
         }
         if (review.rating === 4){
             let stars = document.createElement('span');
-            stars.classList.add('fa', 'fa-star', 'checked', 'allstars');
+            stars.classList.add('fa', 'fa-star', 'checked');
             div.appendChild(stars.cloneNode(true));
             div.appendChild(stars.cloneNode(true));
             div.appendChild(stars.cloneNode(true));
@@ -80,7 +80,7 @@ function createReviewCards(data) {
         }
         if (review.rating === 5){
             let stars = document.createElement('span');
-            stars.classList.add('fa', 'fa-star', 'checked', 'allstars');
+            stars.classList.add('fa', 'fa-star', 'checked');
             div.appendChild(stars.cloneNode(true));
             div.appendChild(stars.cloneNode(true));
             div.appendChild(stars.cloneNode(true));
@@ -92,7 +92,7 @@ function createReviewCards(data) {
         allReviews.appendChild(div);
 
         let button = document.createElement('button');
-        button.classList.add('bg-blue-500', 'hover:bg-blue-400', 'text-white', 'font-bold', 'py-2', 'px-4', 'border-b-4', 'border-blue-700', 'hover:border-blue-500', 'rounded');
+        button.classList.add('reviewbutton', 'inline-flex', 'items-center', 'px-3', 'py-2', 'text-sm', 'font-medium', 'text-center', 'text-white', 'bg-blue-700', 'rounded-lg', 'hover:bg-blue-80', 'focus:ring-4', 'focus:outline-none', 'focus:ring-blue-300', 'dark:bg-blue-600', 'dark:hover:bg-blue-700', 'dark:focus:ring-blue-800');
         button.innerText = 'Bekijk review';
         div.appendChild(button);
         ajaxRequest(apiUrl, average);

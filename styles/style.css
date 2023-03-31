@@ -50,14 +50,16 @@ dialog{
     height: 200px
 }
 
-/*footer{*/
-/*    height: 20px;*/
-/*}*/
-.allstars{
-    display: flex;
-    flex-direction: column;
+
+.review-card{
+    margin-left: 50%;
+    margin-bottom: 1%;
+    position: relative;
 }
-/*.review-card{*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*}*/
+
+.review-card button{
+    position: absolute;
+    /*bottom: 0;*/
+    right: 0;
+
+}

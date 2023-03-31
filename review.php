@@ -26,15 +26,10 @@
   <path d="M1440.59 475.597C1475.63 888.507 1078.69 867.195 0.871216 950.28V0.898692C523.745 128.959 1405.54 62.6862 1440.59 475.597Z" fill="#49A078" />
 </svg>
 <main class="absolute z-20 w-full">
-  <!--    column-->
-  <!--    <div class="grid grid-cols-2 gap-4">-->
-  <!--    Review achterlaten-->
-<!--  <form action="">-->
-<!--    <p>Laat een review achter voor dit station</p>-->
-<!--    <input type="text" id="name" placeholder="Naam" required>-->
-<!--    <input type="text" id="description" placeholder="Toelichting">-->
-<!--    <input type="text" id="tags">-->
-<!--  </form>-->
+<!--    invullen van reviews-->
+    <form action="#">
+
+    </form>
   <!--voorgaande reviews simpel-->
     <div id="all-reviews">
 
