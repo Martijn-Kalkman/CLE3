@@ -3,6 +3,7 @@ window.addEventListener('load', init);
 // Globals
 let apiUrl = 'http://localhost/School/Jaar-1/3e_kwartaal/CLE3/webservice-sharon/index.php';
 let allReviews;
+let reviewAverage;
 let reviewData = {};
 let reviewDetails;
 let detailContent;
@@ -11,6 +12,7 @@ let detailContent;
 function init()
 {
     allReviews = document.getElementById('all-reviews');
+    reviewAverage = document.getElementById('reviewaverage')
     ajaxRequest(apiUrl, createReviewCards);
     allReviews.addEventListener('click', clickedReview);
 
@@ -172,8 +174,52 @@ function average(data){
             sum += data.results[i].rating;
         }
         let average = Math.round(sum / data.count);
-    console.log(average);
 
+    let div = document.createElement('div');
+    div.classList.add('averageofreviews', 'max-w-sm', 'p-6', 'bg-white', 'border', 'border-gray-200', 'rounded-lg', 'shadow', 'dark:bg-gray-700', 'dark:border-gray-700');
+
+    if (average === 1){
+        let stars = document.createElement('span');
+        stars.classList.add('fa', 'fa-star', 'checked');
+        div.appendChild(stars);
+    }
+
+    if (average === 2){
+        let stars = document.createElement('span');
+        stars.classList.add('fa', 'fa-star', 'checked');
+        div.appendChild(stars.cloneNode(true));
+        div.appendChild(stars.cloneNode(true));
+    }
+
+    if (average === 3){
+        let stars = document.createElement('span');
+        stars.classList.add('fa', 'fa-star', 'checked');
+        div.appendChild(stars.cloneNode(true));
+        div.appendChild(stars.cloneNode(true));
+        div.appendChild(stars.cloneNode(true));
+    }
+    if (average === 4){
+        let stars = document.createElement('span');
+        stars.classList.add('fa', 'fa-star', 'checked');
+        div.appendChild(stars.cloneNode(true));
+        div.appendChild(stars.cloneNode(true));
+        div.appendChild(stars.cloneNode(true));
+        div.appendChild(stars.cloneNode(true));
+    }
+    if (average === 5){
+        let stars = document.createElement('span');
+        stars.classList.add('fa', 'fa-star', 'checked');
+        div.appendChild(stars.cloneNode(true));
+        div.appendChild(stars.cloneNode(true));
+        div.appendChild(stars.cloneNode(true));
+        div.appendChild(stars.cloneNode(true));
+        div.appendChild(stars.cloneNode(true));
+    }
+    let h1 = document.createElement('h1')
+    h1.innerText = 'van de 5 sterren gemiddeld';
+    h1.classList.add('mb-2', 'text-2xl', 'font-bold', 'tracking-tight', 'text-gray-900', 'dark:text-white');
+    div.appendChild(h1);
+    reviewAverage.appendChild(div);
 }
 
 function detailModalClickHandler(e){
@@ -185,6 +231,7 @@ function detailModalClickHandler(e){
 function detailCloseHandler() {
     allReviews.classList.remove('dialog-open');
 }
+
 //Error function
 function ajaxErrorHandler(data){
     console.log(data);

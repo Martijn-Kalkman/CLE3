@@ -33,33 +33,5 @@ header {
     background-color: #003554;
 }
 
-.reviewname{
-    font-size: 1.4em;
-}
-
-.fa{
-    color: yellow;
-}
-
-button{
-    background-color: #ff9d2f;
-}
-
-dialog{
-    width: 200px;
-    height: 200px
-}
 
 
-.review-card{
-    margin-left: 50%;
-    margin-bottom: 1%;
-    position: relative;
-}
-
-.review-card button{
-    position: absolute;
-    /*bottom: 0;*/
-    right: 0;
-
-}
