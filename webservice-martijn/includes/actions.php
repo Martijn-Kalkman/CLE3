@@ -13,6 +13,7 @@ function getReviews()
         "results" => [
             [
                 "id" => 1,
+                "name" => "station name",
                 "elevator_height" => "5 Meter",
                 "status" => "Werkend",
                 "closed" => "gesloten tot 15 maart 2023",

@@ -40,6 +40,8 @@ function createReviewCards(data) {
             elevator_height.innerText = review.elevator_height;
             div.appendChild(elevator_height);
 
+
+
             let status = document.createElement('p');
             status.innerText = review.status;
             div.appendChild(status);
@@ -57,16 +59,45 @@ function createReviewCards(data) {
             div.appendChild(specifics);
 
             let elavatorImage = document.createElement('img');
-            elavatorImage.classList.add('elavatorImage');
+            elavatorImage.classList.add('rounded-xl');
             elavatorImage.id = 'elavatorImage';
             elavatorImage.src = review.image;
             document.getElementById('image-container').appendChild(elavatorImage);
             console.log(elavatorImage);
 
+            let name = document.createElement('p');
+            name.classList.add('text-6xl', 'font-normal', 'leading-normal', 'mt-0', 'mb-2', 'items-center', 'justify-center');
+            name.id = 'name';
+            name.innerText = review.name;
+            document.getElementById('name').appendChild(name);
+            console.log(name);
+
             elavatorStatus.appendChild(div);
         }
     }
 }
+
+// Function to open the modal
+function openModal() {
+    // Get the modal element
+    const modal = document.getElementById('modal');
+
+    // Show the modal
+    modal.classList.remove('hidden');
+}
+
+// Function to close the modal
+function closeModal() {
+    // Get the modal element
+    const modal = document.getElementById('modal');
+
+    // Hide the modal
+    modal.classList.add('hidden');
+}
+
+// Add event listeners to the open and close modal buttons
+document.getElementById('openModal').addEventListener('click', openModal);
+document.getElementById('closeModal').addEventListener('click', closeModal);
 
 
 //Function write the name and rating from the array

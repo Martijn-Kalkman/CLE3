@@ -35,20 +35,54 @@
 
     <div class="flex flex-col md:flex-row m-6">
         <div class="bg-blue-500 text-white p-4 m-6 w-full md:w-3/4">
-            Test
+
         </div>
         <div class="text-white p-4 w-full md:w-2/4 md:flex-col md:ml-6 md:mt-6">
-            <div class="mb-4 bg-green-500">
+            <div class="mb-4">
                 <div id="image-container"></div>
 
             </div>
-            <div class="mb-4 bg-green-500">
-                    <div id="elavatorStatus">
+            <div class="mb-4 flex p-2 bg-green-500">
+                <div id="name"></div>
 
-                    </div>
+            </div>
+                <button id="openModal" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Open Modal
+                </button>
             </div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div id="modal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+        <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <!-- Background overlay -->
+            <div class="fixed inset-0 transition-opacity">
+                <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+            </div>
+
+            <!-- Modal content -->
+            <div class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
+                <div>
+                    <div class="mt-3 text-center sm:mt-5">
+                        <h3 class="text-lg leading-6 font-medium text-gray-900">
+                            <div id="elavatorStatus">
+
+                            </div>
+                        </h3>
+                    </div>
+                </div>
+                <div class="mt-5 sm:mt-6">
+        <span class="flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto">
+          <button id="closeModal" type="button" class="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+            Close
+          </button>
+        </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 </main>
