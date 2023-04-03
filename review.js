@@ -40,7 +40,6 @@ function ajaxRequest(url, succesHandler){
 // Function create a card with a review of a person
 function createReviewCards(data) {
     for (let review of data.results) {
-        // console.log(review);
         let div = document.createElement('div');
         div.classList.add('review-card', 'max-w-sm', 'p-6', 'bg-white', 'border', 'border-gray-200', 'rounded-lg', 'shadow', 'dark:bg-gray-700', 'dark:border-gray-700');
         div.dataset.name = review.name;
@@ -108,7 +107,7 @@ function clickedReview(e) {
     if (clickedItem.nodeName !== 'BUTTON'){
         return;
     }
-
+    console.log(e);
     let review = reviewData[clickedItem.dataset.id];
     console.log(review);
 
@@ -234,7 +233,6 @@ function detailCloseHandler() {
 
 //Error function
 function ajaxErrorHandler(data){
-    console.log(data);
     let error = document.createElement('div');
     error.classList.add('error');
     error.innerText = "Op het moment kunnen de reviews niet geladen worden, probeer het later opnieuw"
