@@ -1,7 +1,7 @@
 window.addEventListener('load', init);
 
 // Globals
-let apiUrl = 'http://localhost/School/Jaar-1/3e_kwartaal/CLE3/webservice-sharon/index.php';
+let apiUrl = 'http://localhost/CLE3/webservice-sharon/index.php';
 let allReviews;
 let reviewAverage;
 let reviewData = {};

@@ -1,3 +1,5 @@
+
+
 .navbar{
  background-color: red;
  height: 6vh;
@@ -33,5 +35,34 @@ header {
     background-color: #003554;
 }
 
+.status{
+    height: 80px;
+    width: 45vw;
+    position: absolute;
+    left: 2vw;
+}
 
+.lift-img{
+    height: 50vh;
+    width: 35vw;
+    position: absolute;
+    right: 2vw;
+}
 
+.lift-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+}
+.lift-img p{
+    color: red;
+    text-align: justify;
+
+}
+
+.NSbanner{
+ height: 400px;
+    width: 100%;
+}

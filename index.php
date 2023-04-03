@@ -25,7 +25,7 @@
 
 <body class="">
     <?php require_once('components/header.php'); ?>
-    <svg class="absolute z-10" width="1443" height="951" viewBox="0 0 1443 951" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="absolute z-10 lg:w-[68rem] w-[22.5rem] sm:w-[20rem]" width="1443" height="951" viewBox="0 0 1443 951" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1440.59 475.597C1475.63 888.507 1078.69 867.195 0.871216 950.28V0.898692C523.745 128.959 1405.54 62.6862 1440.59 475.597Z" fill="#49A078" />
     </svg>
     <main class="absolute z-20 w-full">
@@ -59,15 +59,15 @@
                 </p>
             </div>
             <div class="">
-                <img class="mx-auto " src="https://picsum.photos/seed/picsum/600/300" alt="" srcset="">
+                <img class="mx-auto " src="images/rolstoelgebruiker_instappen.jpg" alt="Rolstoel gebruiker die in het ov instapt"/>
             </div>
         </div>
         <div class="mt-40">
-            <img class="mx-auto " src="https://picsum.photos/seed/picsum/1920/300" alt="" srcset="">
+            <img class="mx-auto NSbanner object-cover" src="images/NS_banner.jpg" alt="Banner NS trein" srcset="">
         </div>
         <div class="flex flex-row flex-wrap justify-between items-center mt-40 w-8/12 mx-auto border-b-4 border-black pb-16">
             <div class="">
-                <img class="mx-auto " src="https://picsum.photos/seed/picsum/600/300" alt="" srcset="">
+                <img class="mx-auto object-cover w-[30rem] sm:w-[20rem] lg:w-[30rem]" src="images/rolstoelgebruiker_metro.jpg" alt="" srcset="">
             </div>
             <div class="w-96">
                 <h1><strong>Over ons</strong></h1>

@@ -1,0 +1,10 @@
+.elavator-data{
+    position: relative;
+    background-color: yellow;
+    width: 20vw;
+    margin-left: auto;
+    margin-right: 20px;
+}
+.elavatorImage{
+    width: 20px;
+}

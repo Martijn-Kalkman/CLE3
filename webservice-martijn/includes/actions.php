@@ -1,67 +1,89 @@
 <?php
+
+
+
 /**
  * @return array
  */
-function getDishes()
+function getReviews()
 {
-    return [
-        [
-            "id" => 1,
-            "elevator_height" => "5 Meter",
-            "status" => "Werkend",
-            "closed" => "gesloten tot 15 maart 2023",
-            "accessibility" => "Geschikt voor mensen met rolstoel",
-            "specifics" => "Geen bijzonderheden"
-        ],
-        [
-            "id" => 2,
-            "name" => "Kale",
-            "kitchen" => "Dutch",
-        ],
-        [
-            "id" => 3,
-            "name" => "Lasagna",
-            "kitchen" => "Italian",
-        ],
-        [
-            "id" => 4,
-            "name" => "Kebab",
-            "kitchen" => "Turkish",
-        ],
-        [
-            "id" => 5,
-            "name" => "Paella",
-            "kitchen" => "Spanish",
+
+    $elavatorInfo = [
+//        "count" => 5,
+        "results" => [
+            [
+                "id" => 1,
+                "elevator_height" => "5 Meter",
+                "status" => "Werkend",
+                "closed" => "gesloten tot 15 maart 2023",
+                "accessibility" => "Geschikt voor mensen met rolstoel",
+                "specifics" => "Geen bijzonderheden",
+                "image" =>  "images/lift.jpg"
+            ],
+            [
+                "id" => 2,
+                "elevator_height" => "5 Meter",
+                "status" => "Werkend",
+                "closed" => "gesloten tot 15 maart 2023",
+                "accessibility" => "Geschikt voor mensen met rolstoel",
+                "specifics" => "Geen bijzonderheden"
+            ],
+            [
+                "id" => 3,
+                "elevator_height" => "5 Meter",
+                "status" => "Werkend",
+                "closed" => "gesloten tot 15 maart 2023",
+                "accessibility" => "Geschikt voor mensen met rolstoel",
+                "specifics" => "Geen bijzonderheden"
+            ],
+            [
+                "id" => 4,
+                "elevator_height" => "5 Meter",
+                "status" => "Werkend",
+                "closed" => "gesloten tot 15 maart 2023",
+                "accessibility" => "Geschikt voor mensen met rolstoel",
+                "specifics" => "Geen bijzonderheden"
+            ],
+            [
+                "id" => 5,
+                "elevator_height" => "5 Meter",
+                "status" => "Werkend",
+                "closed" => "gesloten tot 15 maart 2023",
+                "accessibility" => "Geschikt voor mensen met rolstoel",
+                "specifics" => "Geen bijzonderheden"
+            ]
         ]
     ];
+
+    return $elavatorInfo;
 }
 
 /**
  * @param $id
  * @return mixed
  */
-function getDishDetails($id)
+function getReviewDetails($id)
 {
     $tags = [
         1 => [
-            "recipe" => "Put it in the oven and go!",
-            "tags" => ['cheese', 'oven']
+            "comment" => "De lift werkt 9/10 keren niet, ik raad zeker niet aan om gebruik te maken van dit station.",
+            "tags" => ['lift', 'afgeraden']
         ],
         2 => [
-            "recipe" => "You can make this delicious Dutch meal by ...",
-            "tags" => ['unox', 'healthy', 'stamppot', 'boerenkool']
+            "comment" => "De lift (als hij al werkt) stinkt enorm naar urine.",
+            "tags" => ['lift', 'afgeraden']
         ],
         3 => [
-            "recipe" => "Very nice when your grandma prepares this meal",
-            "tags" => ['omnomnom']
+            "comment" => "Vaak werkt de lift niet maar gelukkig zijn er twee.",
+            "tags" => ['lift'],
         ],
         4 => [
-            "recipe" => "Everytime in the city after midnight",
-            "tags" => ['kapsalon', 'tasty', 'meat']
+            "comment" => "Er lopen weinig werknemers rond om te helpen mocht het nodig zijn.",
+            "tags" => ['werknemers', 'afgeraden']
         ],
         5 => [
-            "recipe" => "Specialty when on holiday in Spain",
-            "tags" => ['fish']
+            "comment" => "Er zit een stoeptegel los waardoor ik het station niet op kom.",
+            "tags" => ['stoeptegel', 'afgeraden']
         ],
     ];
 
