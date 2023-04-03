@@ -2,6 +2,7 @@ window.addEventListener('load', init);
 
 // Globals
 let apiUrl = 'http://localhost/School/Jaar-1/3e_kwartaal/CLE3/webservice-sharon/index.php';
+
 let allReviews;
 let reviewAverage;
 let reviewData = {};
@@ -17,7 +18,7 @@ function init()
     allReviews.addEventListener('click', clickedReview);
 
     reviewDetails = document.getElementById('review-detail');
-    detailContent = document.querySelectorAll('.modal-content');
+    detailContent = document.querySelector('.modal-content');
     reviewDetails.addEventListener('click', detailModalClickHandler);
     reviewDetails.addEventListener('close', detailCloseHandler);
 }
@@ -95,6 +96,7 @@ function createReviewCards(data) {
         let button = document.createElement('button');
         button.classList.add('reviewbutton', 'inline-flex', 'items-center', 'px-3', 'py-2', 'text-sm', 'font-medium', 'text-center', 'text-white', 'bg-blue-700', 'rounded-lg', 'hover:bg-blue-80', 'focus:ring-4', 'focus:outline-none', 'focus:ring-blue-300', 'dark:bg-blue-600', 'dark:hover:bg-blue-700', 'dark:focus:ring-blue-800');
         button.innerText = 'Bekijk review';
+        button.dataset.id = review.id;
         div.appendChild(button);
 
     }
@@ -107,67 +109,37 @@ function clickedReview(e) {
     if (clickedItem.nodeName !== 'BUTTON'){
         return;
     }
-    console.log(e);
-    let review = reviewData[clickedItem.dataset.id];
-    console.log(review);
 
-    detailContent.innerHTML = '';
-
-    // let name = document.createElement('h2');
-    // name.classList.add('mb-2', 'text-2xl', 'font-bold', 'tracking-tight', 'text-gray-900', 'dark:text-white');
-    // name.innerText = review.name;
-    // div.appendChild(name);
-
-
-
-    // if (review.rating === 1){
-    //     let stars = document.createElement('span');
-    //     stars.classList.add('fa', 'fa-star', 'checked');
-    //     div.appendChild(stars);
-    // }
-    //
-    // if (review.rating === 2){
-    //     let stars = document.createElement('span');
-    //     stars.classList.add('fa', 'fa-star', 'checked');
-    //     div.appendChild(stars.cloneNode(true));
-    //     div.appendChild(stars.cloneNode(true));
-    // }
-    //
-    // if (review.rating === 3){
-    //     let stars = document.createElement('span');
-    //     stars.classList.add('fa', 'fa-star', 'checked');
-    //     div.appendChild(stars.cloneNode(true));
-    //     div.appendChild(stars.cloneNode(true));
-    //     div.appendChild(stars.cloneNode(true));
-    // }
-    // if (review.rating === 4){
-    //     let stars = document.createElement('span');
-    //     stars.classList.add('fa', 'fa-star', 'checked');
-    //     div.appendChild(stars.cloneNode(true));
-    //     div.appendChild(stars.cloneNode(true));
-    //     div.appendChild(stars.cloneNode(true));
-    //     div.appendChild(stars.cloneNode(true));
-    // }
-    // if (review.rating === 5){
-    //     let stars = document.createElement('span');
-    //     stars.classList.add('fa', 'fa-star', 'checked');
-    //     div.appendChild(stars.cloneNode(true));
-    //     div.appendChild(stars.cloneNode(true));
-    //     div.appendChild(stars.cloneNode(true));
-    //     div.appendChild(stars.cloneNode(true));
-    //     div.appendChild(stars.cloneNode(true));
-    // }
-
-
+    let reviewID = clickedItem.dataset.id;
+    let extraURL = apiUrl+'?id='+reviewID;
     reviewDetails.showModal();
     allReviews.classList.add('dialog-open');
 
-    // reviewDetails.innerText = "Hoi"
+    ajaxRequest(extraURL, fillDialog);
+}
+
+
+
+
+function fillDialog(data){
+    detailContent.innerHTML = '';
+
+        let tags = document.createElement('h3');
+        tags.innerHTML = data.tags;
+        tags.classList.add('text-white', 'font-bold', 'py-2', 'px-4', 'rounded-full');
+        detailContent.appendChild(tags);
+
+        let description = document.createElement('h1');
+        description.innerHTML = data.comment;
+        description.classList.add('text-white')
+        detailContent.appendChild(description);
 }
 
 
 
 function average(data){
+
+
         let sum = 0;
         for (let i = 0; i < data.results.length; i++) {
             sum += data.results[i].rating;
@@ -176,6 +148,11 @@ function average(data){
 
     let div = document.createElement('div');
     div.classList.add('averageofreviews', 'max-w-sm', 'p-6', 'bg-white', 'border', 'border-gray-200', 'rounded-lg', 'shadow', 'dark:bg-gray-700', 'dark:border-gray-700');
+
+    let title = document.createElement('h1');
+    title.innerHTML = data.name;
+    title.classList.add('mb-2', 'text-2xl', 'font-bold', 'tracking-tight', 'text-gray-900', 'dark:text-white');
+    div.appendChild(title);
 
     if (average === 1){
         let stars = document.createElement('span');
@@ -218,7 +195,9 @@ function average(data){
     h1.innerText = 'van de 5 sterren gemiddeld';
     h1.classList.add('mb-2', 'text-2xl', 'font-bold', 'tracking-tight', 'text-gray-900', 'dark:text-white');
     div.appendChild(h1);
+
     reviewAverage.appendChild(div);
+
 }
 
 function detailModalClickHandler(e){
@@ -230,6 +209,12 @@ function detailModalClickHandler(e){
 function detailCloseHandler() {
     allReviews.classList.remove('dialog-open');
 }
+
+// function saveFavorite()
+// {
+//     localStorage.setItem('myFavorite', favorite);
+//     let myFavorite = localStorage.getItem('myFavorite');
+// }
 
 //Error function
 function ajaxErrorHandler(data){

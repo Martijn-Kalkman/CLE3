@@ -87,9 +87,10 @@
 
     </div>
 <!--    dialoogvenster-->
-    <dialog class="modal" id="review-detail">
-        <div class="modal-content"></div>
+    <dialog class="modal max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-700 dark:border-gray-700" id="review-detail">
         <button class="modal-close">❌</button>
+        <div class="modal-content"></div>
+
     </dialog>
 
 
