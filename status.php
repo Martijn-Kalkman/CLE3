@@ -42,13 +42,14 @@
                 <div id="image-container"></div>
 
             </div>
-            <div class="mb-4 flex p-2 bg-green-500">
+            <div class="mb-4 flex p-2 col text-black">
                 <div id="name"></div>
 
             </div>
-                <button id="openModal" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    Open Modal
-                </button>
+
+            <button id="modalbtn">
+
+            </button>
             </div>
         </div>
     </div>
