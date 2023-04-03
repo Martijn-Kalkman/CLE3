@@ -19,7 +19,7 @@
 </head>
 <body>
 
-<nav class="bg-white px-2 sm:px-4 py-2.5 rounded">
+<nav class="bg-white px-2 sm:px-4 py-2.5 rounded w-full">
     <div class="container flex flex-wrap items-center justify-between mx-auto">
         <a href="index.php" class="flex items-center decoration">
             <img src="./images/handilogoicon.png" class="h-6 mr-3 sm:h-9" alt="" />

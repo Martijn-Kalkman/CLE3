@@ -20,25 +20,19 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
-    <title>Hello, world!!!</title>
+    <title>Rolstoel</title>
 </head>
 
 <body class="">
     <?php require_once('components/header.php'); ?>
-    <svg class="absolute z-10" width="1443" height="951" viewBox="0 0 1443 951" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="absolute z-10 lg:w-[68rem] w-[22.5rem] sm:w-[20rem]" width="1443" height="951" viewBox="0 0 1443 951" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1440.59 475.597C1475.63 888.507 1078.69 867.195 0.871216 950.28V0.898692C523.745 128.959 1405.54 62.6862 1440.59 475.597Z" fill="#49A078" />
     </svg>
     <main class="absolute z-20 w-full">
-        <div>
+        <div class="">
             <!-- <img class="mx-auto mt-40 " src="https://picsum.photos/seed/picsum/1200/300" alt="" srcset=""> -->
             <div class="swiper mySwiper ">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img class="mx-auto mt-40 " src="https://picsum.photos/seed/picsum/1200/400" alt="" srcset=""></div>
-                    <div class="swiper-slide"><img class="mx-auto mt-40 " src="https://picsum.photos/seed/picsum/1200/400" alt="" srcset=""></div>
-                    <div class="swiper-slide"><img class="mx-auto mt-40 " src="https://picsum.photos/seed/picsum/1200/400" alt="" srcset=""></div>
-                    <div class="swiper-slide"><img class="mx-auto mt-40 " src="https://picsum.photos/seed/picsum/1200/400" alt="" srcset=""></div>
-                    <div class="swiper-slide"><img class="mx-auto mt-40 " src="https://picsum.photos/seed/picsum/1200/400" alt="" srcset=""></div>
-                    <div class="swiper-slide"><img class="mx-auto mt-40 " src="https://picsum.photos/seed/picsum/1200/400" alt="" srcset=""></div>
                     <div class="swiper-slide"><img class="mx-auto mt-40 " src="https://picsum.photos/seed/picsum/1200/400" alt="" srcset=""></div>
                     <div class="swiper-slide"><img class="mx-auto mt-40 " src="https://picsum.photos/seed/picsum/1200/400" alt="" srcset=""></div>
                     <div class="swiper-slide"><img class="mx-auto mt-40 " src="https://picsum.photos/seed/picsum/1200/400" alt="" srcset=""></div>
@@ -48,7 +42,7 @@
                 <div class="swiper-pagination"></div>
             </div>
         </div>
-        <div class="flex flex-row flex-wrap justify-between items-center mt-40 w-8/12 mx-auto border-b-4 border-black pb-16">
+        <div class="flex flex-row  justify-between items-center mt-40 w-10/12 lg:w-9/12 mx-auto border-b-4 border-black pb-16">
             <div class="w-96">
                 <p>Deze applicatie helpt rolstoelgebruikers om te controleren of een station toegankelijk is voor een rolstoel. Na uitgebreid onderzoek en eigen
                     ervaringen zijn wij erachter gekomen dat het een veelvoorkomend probleem is dat een station online als rolstoeltoegankelijk staat maar het op
@@ -59,15 +53,15 @@
                 </p>
             </div>
             <div class="">
-                <img class="mx-auto " src="https://picsum.photos/seed/picsum/600/300" alt="" srcset="">
+                <img class="mx-auto w-96 lg:w-80" src="images/rolstoelgebruiker_instappen.jpg" alt="Rolstoel gebruiker die in het ov instapt"/>
             </div>
         </div>
         <div class="mt-40">
-            <img class="mx-auto " src="https://picsum.photos/seed/picsum/1920/300" alt="" srcset="">
+            <img class="mx-auto NSbanner object-cover" src="images/NS_banner.jpg" alt="Banner NS trein" srcset="">
         </div>
         <div class="flex flex-row flex-wrap justify-between items-center mt-40 w-8/12 mx-auto border-b-4 border-black pb-16">
             <div class="">
-                <img class="mx-auto " src="https://picsum.photos/seed/picsum/600/300" alt="" srcset="">
+                <img class="mx-auto object-cover w-[30rem] sm:w-[20rem] lg:w-[30rem]" src="images/rolstoelgebruiker_metro.jpg" alt="" srcset="">
             </div>
             <div class="w-96">
                 <h1><strong>Over ons</strong></h1>
@@ -75,26 +69,18 @@
                 kennen!</p>
             </div>
         </div>
-        <div class="flex flex-row flex-wrap justify-between w-8/12 mx-auto mt-40">
+        <div class="flex flex-row flex-wrap justify-between w-8/12 mx-auto my-40">
             <div class="flex flex-col">
-                <img class="mx-auto rounded-full animate__pulse animate__animated g " src="https://picsum.photos/seed/picsum/200/200" alt="" srcset="">
-                <h1>Thimo</h1>
-                <p class="w-64 text-center mt-12">Ik ben Thimo.</p>
-            </div>
-            <div class="flex flex-col">
-                <img class="mx-auto rounded-full animate__pulse animate__animated g" src="https://picsum.photos/seed/picsum/200/200" alt="" srcset="">
+                <img class="mx-auto w-40 rounded-full animate__pulse animate__animated g" src="./images/1671465292831.jpg" alt="" srcset="">
                 <h1>Calvin</h1>
-                <p class="w-64 text-center mt-12">Ik ben Calvin.</p>
             </div>
             <div class="flex flex-col">
-                <img class="mx-auto rounded-full animate__pulse animate__animated g" src="https://picsum.photos/seed/picsum/200/200" alt="" srcset="">
+                <img class="mx-auto w-40 h-40 object-fit rounded-full animate__pulse animate__animated g" src="./images/Foto-Sharon.jpg" alt="" srcset="">
                 <h1>Martijn</h1>
-                <p class="w-64 text-center mt-12">Ik ben Martijn.</p>
             </div>
             <div class="flex flex-col">
-                <img class="mx-auto rounded-full animate__pulse animate__animated g" src="https://picsum.photos/seed/picsum/200/200" alt="" srcset="">
+                <img class="mx-auto w-40 rounded-full animate__pulse animate__animated g" src="./images/martijn.png" alt="" srcset="">
                 <h1>Sharon</h1>
-                <p class="w-64 text-center mt-12">Hi! Ik ben Sharon en ik ben 20 jaar oud.</p>
             </div>
         </div>
         <?php require_once('components/footer.php'); ?>

@@ -54,7 +54,13 @@
     <section class="main">
         <div class="flex flex-row justify-between w-9/12 mx-auto mt-40">
             <div class="w-5/12">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, dolores repudiandae? Autem nam distinctio exercitationem architecto perferendis, eligendi laboriosam omnis voluptates voluptatibus. Optio, saepe aperiam ullam odit cum eius commodi incidunt cumque dignissimos quis nostrum quo officia eos, ex doloremque voluptates rem omnis. Inventore enim, facilis alias beatae, obcaecati aperiam sunt blanditiis debitis perspiciatis temporibus sequi earum vel, fuga quod. Placeat fuga quod consequatur impedit consequuntur dignissimos voluptate esse numquam eos ab nihil porro, cum ut. Minus, aperiam laudantium. Officia, voluptatum cum praesentium et accusamus repudiandae voluptates architecto culpa voluptatem quisquam ipsum est quod adipisci, excepturi eius ratione harum iusto porro corrupti repellat unde, blanditiis aliquam cupiditate obcaecati! Sequi ratione laborum quisquam consequuntur omnis soluta perspiciatis provident eius dolor illum! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id dolorem animi illo ea quam esse quidem, consequatur voluptas itaque nam deserunt consectetur, voluptatem similique blanditiis velit distinctio saepe? Cum, quis!</p>
+                <p>
+                Een kaart kan een onschatbare bron van informatie zijn voor mensen met beperkte mobiliteit die problemen hebben met lopen. Bij het reizen met het openbaar vervoer kan het vinden van de juiste route en stations een uitdaging zijn, vooral als je niet bekend bent met de stad. Gelukkig zijn er nu speciale kaarten beschikbaar die specifiek zijn ontworpen voor mensen met beperkte mobiliteit en die informatie bieden over de toegankelijkheid van treinstations.
+                <br/><br/>
+Met behulp van een toegankelijkheidskaart kunnen mensen met beperkte mobiliteit snel en gemakkelijk zien welke treinstations toegankelijk zijn voor rolstoelgebruikers, welke stations liften hebben, welke stations een roltrap hebben en welke stations een rolstoelhelling hebben. Deze informatie kan hen helpen bij het plannen van hun reizen en het verminderen van stress en angst bij het navigeren door een onbekende stad.
+<br/><br/>
+Een goede toegankelijkheidskaart moet duidelijk en overzichtelijk zijn, met alle nodige informatie gemakkelijk te begrijpen. Door het gebruik van deze kaarten kunnen mensen met beperkte mobiliteit meer zelfvertrouwen krijgen bij het reizen met het openbaar vervoer en hun onafhankelijkheid vergroten, waardoor ze meer kansen hebben om te genieten van de vele bezienswaardigheden en attracties die onze steden te bieden hebben.
+                </p>
             </div>
             <div class="w-5/12">
                 <img src="https://picsum.photos/seed/picsum/400/400" alt="">
