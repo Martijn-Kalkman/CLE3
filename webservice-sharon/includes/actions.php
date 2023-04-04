@@ -1,5 +1,3 @@
-
-
 <?php
 
 
@@ -11,6 +9,7 @@ function getReviews()
 {
 
     $data = [
+        "name" => "Metrostation Beurs",
         "count" => 5,
         "results" => [
             [
@@ -53,11 +52,11 @@ function getReviewDetails($id)
     $tags = [
         1 => [
             "comment" => "De lift werkt 9/10 keren niet, ik raad zeker niet aan om gebruik te maken van dit station.",
-            "tags" => ['lift', 'afgeraden']
+            "tags" => ['lift', ' afgeraden']
         ],
         2 => [
             "comment" => "De lift (als hij al werkt) stinkt enorm naar urine.",
-            "tags" => ['lift', 'afgeraden']
+            "tags" => ['lift', ' afgeraden']
         ],
         3 => [
             "comment" => "Vaak werkt de lift niet maar gelukkig zijn er twee.",
@@ -65,11 +64,11 @@ function getReviewDetails($id)
         ],
         4 => [
             "comment" => "Er lopen weinig werknemers rond om te helpen mocht het nodig zijn.",
-            "tags" => ['werknemers', 'afgeraden']
+            "tags" => ['werknemers', ' afgeraden']
         ],
         5 => [
             "comment" => "Er zit een stoeptegel los waardoor ik het station niet op kom.",
-            "tags" => ['stoeptegel', 'afgeraden']
+            "tags" => ['stoeptegel', ' afgeraden']
         ],
     ];
 

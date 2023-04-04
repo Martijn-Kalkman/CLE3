@@ -76,11 +76,11 @@
             </div>
             <div class="flex flex-col">
                 <img class="mx-auto w-40 h-40 object-fit rounded-full animate__pulse animate__animated g" src="./images/Foto-Sharon.jpg" alt="" srcset="">
-                <h1>Martijn</h1>
+                <h1>Sharon</h1>
             </div>
             <div class="flex flex-col">
                 <img class="mx-auto w-40 rounded-full animate__pulse animate__animated g" src="./images/martijn.png" alt="" srcset="">
-                <h1>Sharon</h1>
+                <h1>Martijn</h1>
             </div>
         </div>
         <?php require_once('components/footer.php'); ?>
