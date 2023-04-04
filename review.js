@@ -7,8 +7,8 @@ let allReviews;
 let reviewAverage;
 let reviewDetails;
 let detailContent;
+let favorites = [];
 let favorite;
-let reviewItems = [];
 
 // Start function
 function init()
@@ -26,6 +26,8 @@ function init()
 }
 
 //Function for fetching the API
+//  if correct; go to succesHandler
+//  if incorrect; go to ajaxErrorHandler
 function ajaxRequest(url, succesHandler){
     fetch(url)
         .then((response) => {
@@ -149,22 +151,26 @@ function clickedReview(e) {
 }
 
 function saveFavorite(item) {
-    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    console.log(favorites);
-    if (favorites === '') {
-        favorites.push(item);
+    if (localStorage.getItem('favorites') !== null) {
+        let favoriteItems = localStorage.getItem('favorites');
+        favorites = JSON.parse(favoriteItems);
+            if (favorites.includes(item) === true) {
+                let favoriteIndex = favorites.indexOf(item);
+                favorites.splice(favoriteIndex, 1);
+                localStorage.setItem('favorites', JSON.stringify(favorites));
+                favorite.classList.remove('fa-solid');
+                favorite.classList.add('fa-regular');
 
+            }else{
+                favorites.push(item);
+                console.log(favorites);
+                localStorage.setItem('favorites', JSON.stringify(favorites));
+                favorite.classList.remove('fa-regular');
+                favorite.classList.add('fa-solid');
+            }
+    } else {
         localStorage.setItem('favorites', JSON.stringify(favorites));
     }
-}
-
-function removeFavorite(item) {
-let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-let index = favorites.indexOf(item);
-if (index !== -1){
-    favorites.splice(index, 1);
-}
-localStorage.setItem('favorites', JSON.stringify(favorites));
 }
 
 function fillDialog(data){
@@ -262,11 +268,7 @@ function average(data){
     div.appendChild(h1);
 
     reviewAverage.appendChild(div);
-
-
 }
-
-
 
 function detailModalClickHandler(e){
     if (e.target.nodeName === 'DIALOG' || e.target.nodeName === 'BUTTON' || e.target.nodeName === 'SPAN') {
