@@ -33,9 +33,12 @@ dialog{
 }
 
 .formfield{
-    margin-left: 15%;
+    margin-left: 14%;
+    width: 20%;
+    margin-top: 10%;
 }
 
 .reviewaverage{
     margin-left: 5%;
 }
+
