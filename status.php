@@ -34,9 +34,30 @@
 <main class="absolute z-20 w-full">
 
     <div class="flex flex-col md:flex-row m-6">
-        <div class="bg-blue-500 text-white p-4 m-6 w-full md:w-3/4">
+            <div class="bg-blue-500 text-white p-4 m-6 w-full md:w-3/4">
+                <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Card 1</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">This is the content of Card 1.</p>
+                    <button class="favorite-btn inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        <span class="favorite-label">Add to Favorites</span>
+                        <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
 
-        </div>
+                <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Card 2</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">This is the content of Card 2.</p>
+                    <button class="favorite-btn inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        <span class="favorite-label">Add to Favorites</span>
+                        <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+
+            </div>
         <div class="text-white p-4 w-full md:w-2/4 md:flex-col md:ml-6 md:mt-6">
             <div class="mb-4">
                 <div id="image-container"></div>
@@ -83,6 +104,63 @@
             </div>
         </div>
     </div>
+
+    <h1>Product Reviews</h1>
+    <div id="reviews"></div>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="rating">Rating:</label>
+        <select id="rating" required>
+            <option value="">--Please choose an option--</option>
+            <option value="1">1 star</option>
+            <option value="2">2 stars</option>
+            <option value="3">3 stars</option>
+            <option value="4">4 stars</option>
+            <option value="5">5 stars</option>
+        </select>
+        <label for="comment">Comment:</label>
+        <textarea id="comment" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        const favoriteBtns = document.querySelectorAll('.favorite-btn');
+
+        // Load existing favorites from local storage
+        let favorites = JSON.parse(localStorage.getItem('favorites')) || {};
+
+        // Add event listeners to favorite buttons
+        for (let i = 0; i < favoriteBtns.length; i++) {
+            const favoriteBtn = favoriteBtns[i];
+            const card = favoriteBtn.closest('.max-w-sm');
+            const title = card.querySelector('h5').textContent.trim();
+
+            // Check if this card is already favorited
+            if (favorites[title]) {
+                favoriteBtn.classList.add('bg-yellow-400');
+                favoriteBtn.querySelector('.favorite-label').textContent = 'Remove from Favorites';
+            }
+
+            // Add click event listener to the favorite button
+            favoriteBtn.addEventListener('click', () => {
+                if (favorites[title]) {
+                    // Remove from favorites
+                    delete favorites[title];
+                    favoriteBtn.classList.remove('bg-yellow-400');
+                    favoriteBtn.querySelector('.favorite-label').textContent = 'Add to Favorites';
+                } else {
+                    // Add to favorites
+                    favorites[title] = true;
+                    favoriteBtn.classList.add('bg-yellow-400');
+                    favoriteBtn.querySelector('.favorite-label').textContent = 'Remove from Favorites';
+                }
+
+                // Save favorites to local storage
+                localStorage.setItem('favorites', JSON.stringify(favorites));
+            });
+        }
+
+    </script>
 
 
 

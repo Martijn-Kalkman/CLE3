@@ -106,8 +106,6 @@ function closeModal() {
 }
 
 // Add event listeners to the open and close modal buttons
-document.getElementById('openModal').addEventListener('click', openModal);
-document.getElementById('closeModal').addEventListener('click', closeModal);
 
 
 //Function write the name and rating from the array
