@@ -218,7 +218,8 @@ function average(data){
         }
         let average = Math.round(sum / data.count);
        average2 = sum/data.count;
-
+        let averageLocalStorage = JSON.stringify(average2);
+        window.localStorage.setItem('averages', averageLocalStorage)
     let div = document.createElement('div');
     div.classList.add('averageofreviews', 'p-6', 'bg-white', 'border', 'border-gray-200', 'rounded-lg', 'shadow', 'dark:bg-gray-700', 'dark:border-gray-700');
 
