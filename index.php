@@ -81,7 +81,7 @@
             <h1>Calvin</h1>
         </div>
         <div class="flex flex-col">
-            <img class="mx-auto w-40 h-40 object-fit rounded-full animate__pulse animate__animated g" src="./images/Foto-Sharon.jpg" alt="" srcset="">
+            <img class="mx-auto w-40 h-40 object-cover rounded-full animate__pulse animate__animated g" src="./images/IMG_20230104_155410.jpg" alt="" srcset="">
             <h1>Sharon</h1>
         </div>
         <div class="flex flex-col">
