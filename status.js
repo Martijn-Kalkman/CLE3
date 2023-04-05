@@ -1,8 +1,7 @@
 window.addEventListener('load', init);
 
 // Globals
-let apiUrl = 'http://localhost/CLE3/webservice-martijn/index.php';
-let elavatorStatus;
+let apiUrl = `${window.location.href.split('status.php')[0]}/webservice-martijn/index.php`;let elavatorStatus;
 
 // Start function
 function init()
