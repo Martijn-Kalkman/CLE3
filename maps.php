@@ -64,7 +64,7 @@ Een goede toegankelijkheidskaart moet duidelijk en overzichtelijk zijn, met alle
                 </p>
             </div>
             <div class="w-5/12">
-                <img src="https://picsum.photos/seed/picsum/400/400" alt="">
+                <img src="./images/maps.png" alt="maps">
             </div>
         </div>
         <section class="mx-auto mt-80">
