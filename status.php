@@ -11,8 +11,8 @@
 
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/status.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/status.css">
 
     <link
             rel="stylesheet"
@@ -35,6 +35,7 @@
 
     <div class="flex flex-col md:flex-row m-6">
             <div class="text-white p-4 m-6 w-full md:w-3/4">
+                <h2 class="mb-4 text-4xl  leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Status</h2>
                 <div id="card-list"></div>
 
             </div>
@@ -86,135 +87,46 @@
     </div>
 
 
-    <form id="card-form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <div class="mb-4">
-            <label class="block text-gray-700 font-bold mb-2" for="name-input">
-                Card Name:
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name-input" type="text" placeholder="Enter card name">
-        </div>
-        <div class="mb-4">
-            <label class="block text-gray-700 font-bold mb-2" for="description-input">
-                Card Description:
-            </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="description-input" type="text" placeholder="Enter card description">
-        </div>
-        <div class="flex items-center justify-between">
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="addCardFromForm()">
-                Status
-            </button>
-        </div>
+    <div class="flex justify-center">
+
+    </div>
+
+
+    <form id="status-form" class="w-full max-w-lg mx-auto">
+        <form id="card-form" class="w-full max-w-sm">
+            <div class="md:flex md:items-center mb-6">
+                <div class="md:w-1/3">
+                    <label for="name-input" class="block font-bold md:text-right mb-1 md:mb-0 pr-4">
+                        Naam
+                    </label>
+                </div>
+                <div class="md:w-2/3">
+                    <input type="text" id="name-input" name="name-input" class="bg-white appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" />
+                </div>
+            </div>
+            <div class="md:flex md:items-center mb-6">
+                <div class="md:w-1/3">
+                    <label for="description-input" class="block font-bold md:text-right mb-1 md:mb-0 pr-4">
+                        Beschrijving
+                    </label>
+                </div>
+                <div class="md:w-2/3">
+                    <input type="text" id="description-input" name="description-input" class="bg-white appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" />
+                </div>
+            </div>
+            <div class="md:flex md:items-center">
+                <div class="md:w-1/3"></div>
+                <div class="md:w-2/3">
+                    <input type="button" value="Voeg status toe" onclick="addCardFromForm()" class="mb-5 bg-gray-800 shadow bg-custom hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" />
+                </div>
+            </div>
+        </form>
     </form>
 
 
 
 
-
-
     <script>
-        function addCardFromForm() {
-            // Get input values from form
-            const nameInput = document.getElementById('name-input');
-            const descriptionInput = document.getElementById('description-input');
-            const name = nameInput.value;
-            const description = descriptionInput.value;
-
-            // Create new card
-            const card = document.createElement('div');
-            card.classList.add('text-white', 'p-4', 'm-6', 'w-full', 'md:w-3/4');
-            card.innerHTML = `
-      <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <a href="#">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${name}</h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">${description}</p>
-        <button class="favorite-btn inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-          <span class="favorite-label">Add to Favorites</span>
-          <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </button>
-      </div>
-    `;
-
-            // Add new card to the card list
-            const cardList = document.getElementById('card-list');
-            cardList.appendChild(card);
-
-            // Reset form inputs
-            nameInput.value = '';
-            descriptionInput.value = '';
-        }
-
-        function addCard(cardName, cardDescription) {
-            const card = document.createElement("div");
-            card.className = "bg-blue-500 text-white p-4 m-6 w-full md:w-3/4 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700";
-
-            const cardTitle = document.createElement("a");
-            const cardTitleText = document.createTextNode(cardName);
-            cardTitle.appendChild(cardTitleText);
-            cardTitle.className = "mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white";
-            card.appendChild(cardTitle);
-
-            const cardDesc = document.createElement("p");
-            const cardDescText = document.createTextNode(cardDescription);
-            cardDesc.appendChild(cardDescText);
-            cardDesc.className = "mb-3 font-normal text-gray-700 dark:text-gray-400";
-            card.appendChild(cardDesc);
-
-            const favoriteButton = document.createElement("button");
-            const favoriteButtonText = document.createTextNode("Add to Favorites");
-            favoriteButton.className = "favorite-btn inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800";
-            favoriteButton.appendChild(favoriteButtonText);
-            favoriteButton.addEventListener("click", function() {
-                const cardObject = {
-                    name: cardName,
-                    description: cardDescription
-                };
-                localStorage.setItem(cardName, JSON.stringify(cardObject));
-                alert("Card added to favorites!");
-            });
-            card.appendChild(favoriteButton);
-
-            const cardList = document.getElementById("card-list");
-            cardList.appendChild(card);
-        }
-
-
-
-        const favoriteBtns = document.querySelectorAll('.favorite-btn');
-
-        // Load existing favorites from local storage
-        let favorites = JSON.parse(localStorage.getItem('favorites')) || {};
-
-        // Add event listeners to favorite buttons
-        for (let i = 0; i < favoriteBtns.length; i++) {
-            const favoriteBtn = favoriteBtns[i];
-            const card = favoriteBtn.closest('.max-w-sm');
-            const title = card.querySelector('h5').textContent.trim();
-
-            // Check if this card is already favorited
-            if (favorites[title]) {
-                favoriteBtn.classList.add('bg-yellow-400');
-                favoriteBtn.querySelector('.favorite-label').textContent = 'Remove from Favorites';
-            }
-
-            // Add click event listener to the favorite button
-            favoriteBtn.addEventListener('click', () => {
-                if (favorites[title]) {
-                    // Remove from favorites
-                    delete favorites[title];
-                    favoriteBtn.classList.remove('bg-yellow-400');
-                    favoriteBtn.querySelector('.favorite-label').textContent = 'Add to Favorites';
-                } else {
-                    // Add to favorites
-                    favorites[title] = true;
-                    favoriteBtn.classList.add('bg-yellow-400');
-                    favoriteBtn.querySelector('.favorite-label').textContent = 'Remove from Favorites';
-                }
-
-                // Save favorites to local storage
-                localStorage.setItem('favorites', JSON.stringify(favorites));
-            });
-        }
 
     </script>
 
