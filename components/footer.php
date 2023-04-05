@@ -8,12 +8,11 @@
 
 
 
-            <div class="grid flex flex-row grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                 <div>
                     &copy; Copyright 2023 Handitransport
                 </div>
 <!--handi-->
-            </div>
+
             <svg class="w-[10rem]" width="110" height="100" viewBox="0 0 110 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M109.5 100L0.5 0H109.5V100Z" fill="#49A078"/>
             </svg>
