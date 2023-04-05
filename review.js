@@ -225,7 +225,7 @@ function average(data){
 
     let title = document.createElement('h1');
     title.innerHTML = data.name;
-    title.classList.add('mb-2', 'text-5xxl', 'font-bold', 'tracking-tight', 'text-gray-900', 'dark:text-white');
+    title.classList.add('mb-2', 'text-5xl', 'font-bold', 'tracking-tight', 'text-gray-900', 'dark:text-white');
     div.appendChild(title);
 
     if (average === 1){
