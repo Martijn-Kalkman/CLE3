@@ -10,6 +10,7 @@ let detailContent;
 let favorites = [];
 let favorite;
 
+let prevValue = localStorage.getItem('favorites');
 let eventLocalStorage = [];
 
 // Start function
@@ -55,7 +56,7 @@ function ajaxRequest(url, succesHandler){
 function createReviewCards(data) {
     for (let review of data.results) {
         let div = document.createElement('div');
-        div.classList.add('review-card', 'max-w-sm', 'p-6', 'bg-white', 'border', 'border-gray-200', 'rounded-lg', 'shadow', 'dark:bg-gray-700', 'dark:border-gray-700');
+        div.classList.add('review-card', 'p-6', 'bg-white', 'border', 'border-gray-200', 'rounded-lg', 'shadow', 'dark:bg-gray-700', 'dark:border-gray-700');
         div.dataset.name = review.name;
 
         favorite = document.createElement('span');
@@ -210,8 +211,6 @@ function fillDialog(data){
 
 
 function average(data){
-
-
         let sum = 0;
         for (let i = 0; i < data.results.length; i++) {
             sum += data.results[i].rating;
@@ -220,11 +219,11 @@ function average(data){
         let average2 = sum/data.count;
 
     let div = document.createElement('div');
-    div.classList.add('averageofreviews', 'max-w-sm', 'p-6', 'bg-white', 'border', 'border-gray-200', 'rounded-lg', 'shadow', 'dark:bg-gray-700', 'dark:border-gray-700');
+    div.classList.add('averageofreviews', 'p-6', 'bg-white', 'border', 'border-gray-200', 'rounded-lg', 'shadow', 'dark:bg-gray-700', 'dark:border-gray-700');
 
     let title = document.createElement('h1');
     title.innerHTML = data.name;
-    title.classList.add('mb-2', 'text-2xl', 'font-bold', 'tracking-tight', 'text-gray-900', 'dark:text-white');
+    title.classList.add('mb-2', 'text-5xxl', 'font-bold', 'tracking-tight', 'text-gray-900', 'dark:text-white');
     div.appendChild(title);
 
     if (average === 1){
@@ -311,7 +310,6 @@ function ajaxErrorHandler(data){
     allReviews.before(error);
 }
 
-let prevValue = localStorage.getItem('favorites');
 
 // Set up a function to check for changes to the key
 function checkLocalStorage() {

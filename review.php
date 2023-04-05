@@ -31,6 +31,7 @@
     <div class ="reviewaverage" id="reviewaverage">
 
     </div>
+    <div class="grid grid-cols-2">
     <!--Form-->
     <div class="formfield p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-700 dark:border-gray-700" >
     <form>
@@ -52,6 +53,7 @@
   <!--voorgaande reviews simpel-->
     <div class="allreviews" id="all-reviews">
 
+    </div>
     </div>
 <!--    dialoogvenster-->
     <dialog class="modal max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-700 dark:border-gray-700" id="review-detail">

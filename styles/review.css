@@ -3,7 +3,7 @@
 }
 
 .review-card{
-    margin-left: 50%;
+    margin-left: 5%;
     margin-bottom: 1%;
     position: relative;
 }
@@ -29,16 +29,28 @@ button{
 
 dialog{
     width: 500px;
-    height: 500px
+    height: 300px
 }
 
 .formfield{
-    margin-left: 14%;
-    width: 20%;
-    margin-top: 10%;
+    /*margin-left: 14%;*/
+    /*width: 80%;*/
+    margin-top: 5%;
+    margin-left: 5%;
+
+}
+
+.allreviews{
+    margin-top: 5%;
+    margin-right: 5%;
 }
 
 .reviewaverage{
-    margin-left: 5%;
+    margin-right: 6%;
+    /*margin-left: 5%;*/
 }
 
+.bannerimages img{
+    width: 20px;
+    height: 20px;
+}
