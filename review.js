@@ -349,6 +349,6 @@ setInterval(() => {
         document.querySelector(`[data-id="${eventLocalStorage[index]}"]`).classList.remove('fa-solid')
        if(document.querySelector(`[data-id="${eventLocalStorage[index]}"]`).dataset.id == eventLocalStorage[index]){
         document.querySelector(`[data-id="${eventLocalStorage[index]}"]`).classList.add('fa-solid')
-       } 
+       }
     }
 }, 100);
