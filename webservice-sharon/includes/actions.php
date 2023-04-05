@@ -14,27 +14,27 @@ function getReviews()
         "results" => [
             [
                 "id" => 1,
-                "name" => "Bob",
+                "name" => "Bob Beelts",
                 "rating" => 2,
             ],
             [
                 "id" => 2,
-                "name" => "Hannah",
+                "name" => "Hannah Boshoven",
                 "rating" => 1,
             ],
             [
                 "id" => 3,
-                "name" => "Bert",
+                "name" => "Bert Pieters",
                 "rating" => 3,
             ],
             [
                 "id" => 4,
-                "name" => "Sandra",
+                "name" => "Sandra Kerkman",
                 "rating" => 2,
             ],
             [
                 "id" => 5,
-                "name" => "Belle",
+                "name" => "Belle Bouwers",
                 "rating" => 1,
             ]
         ]
