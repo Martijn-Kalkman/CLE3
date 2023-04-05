@@ -50,3 +50,7 @@ dialog{
     /*margin-left: 5%;*/
 }
 
+.bannerimages img{
+    width: 20px;
+    height: 20px;
+}

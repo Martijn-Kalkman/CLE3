@@ -33,9 +33,9 @@
             <!-- <img class="mx-auto mt-40 " src="https://picsum.photos/seed/picsum/1200/300" alt="" srcset=""> -->
             <div class="swiper mySwiper ">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img class="mx-auto mt-40 " src="images/rolstoel3.jpg" alt="" srcset=""></div>
-                    <div class="swiper-slide"><img class="mx-auto mt-40 " src="images/rolstoel2.jpg" alt="" srcset=""></div>
-                    <div class="swiper-slide"><img class="mx-auto mt-40 " src="images/rolstoel1.jpg" alt="" srcset=""></div>
+                    <div class="swiper-slide"><img class="mx-auto mt-40 object-fit w-1/3" src="images/rolstoel3.jpg" alt="" srcset=""></div>
+                    <div class="swiper-slide"><img class="mx-auto mt-40 object-fit w-1/3" src="images/rolstoel2.jpg" alt="" srcset=""></div>
+                    <div class="swiper-slide"><img class="mx-auto mt-40 object-fit w-1/3" src="images/rolstoel4.jpg" alt="" srcset=""></div>
                 </div>
                 <div class="swiper-button-next mt-12"></div>
                 <div class="swiper-button-prev mt-12"></div>
