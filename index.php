@@ -30,25 +30,18 @@
     </svg>
     <main class="absolute z-20 w-full">
         <div class="">
-            <div class="swiper mySwiper w-3/4 mx-auto">
+            <!-- <img class="mx-auto mt-40 " src="https://picsum.photos/seed/picsum/1200/300" alt="" srcset=""> -->
+            <div class="swiper mySwiper ">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img class="mx-auto mt-40 h-96 w-full object-cover" src="images/rolstoel3.jpg" alt="" srcset="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="mx-auto mt-40 h-96 w-full object-cover" src="images/rolstoel2.jpg" alt="" srcset="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="mx-auto mt-40 h-96 w-full object-cover" src="images/rolstoel1.jpg" alt="" srcset="">
-                    </div>
+                    <div class="swiper-slide"><img class="mx-auto mt-40 " src="images/rolstoel3.jpg" alt="" srcset=""></div>
+                    <div class="swiper-slide"><img class="mx-auto mt-40 " src="images/rolstoel2.jpg" alt="" srcset=""></div>
+                    <div class="swiper-slide"><img class="mx-auto mt-40 " src="images/rolstoel1.jpg" alt="" srcset=""></div>
                 </div>
                 <div class="swiper-button-next mt-12"></div>
                 <div class="swiper-button-prev mt-12"></div>
                 <div class="swiper-pagination"></div>
             </div>
         </div>
-
-
         <div class="flex flex-row  justify-between items-center mt-40 w-10/12 lg:w-9/12 mx-auto border-b-4 border-black pb-16">
             <div class="w-96">
                 <p>Deze applicatie helpt rolstoelgebruikers om te controleren of een station toegankelijk is voor een rolstoel. Na uitgebreid onderzoek en eigen
