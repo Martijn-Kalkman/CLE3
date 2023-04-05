@@ -1,14 +1,16 @@
 window.addEventListener('load', init);
 
-// Globals
-let apiUrl = 'http://localhost/School/Jaar-1/3e_kwartaal/CLE3/webservice-sharon/index.php';
 
+// Globals
+let apiUrl = `${window.location.href.split('review.php')[0]}/webservice-sharon/index.php`;
 let allReviews;
 let reviewAverage;
 let reviewDetails;
 let detailContent;
 let favorites = [];
 let favorite;
+
+let eventLocalStorage = [];
 
 // Start function
 function init()
@@ -23,7 +25,14 @@ function init()
     reviewDetails.addEventListener('click', detailModalClickHandler);
     reviewDetails.addEventListener('close', detailCloseHandler);
 
+
 }
+
+window.addEventListener('storage', function(event) {
+    if (event.key === 'favorites') {
+      console.log('The value of myKey has changed to: ' + event.newValue);
+    }
+  });
 
 //Function for fetching the API
 //  if correct; go to succesHandler
@@ -50,7 +59,7 @@ function createReviewCards(data) {
         div.dataset.name = review.name;
 
         favorite = document.createElement('span');
-        favorite.classList.add('fa-regular', 'fa-star', 'absolute', 'top-5', 'right-0', 'h-16', 'w-16');
+        favorite.classList.add('fa-regular', 'fa-star', 'stars', 'absolute', 'top-5', 'right-0', 'h-16', 'w-16');
         favorite.dataset.id = review.id;
         div.appendChild(favorite);
 
@@ -150,6 +159,18 @@ function clickedReview(e) {
     }
 }
 
+/**
+ * This function will save an favourite review item with the following params
+ * @param {string} item this is the param of the function which holds a string value
+ * 
+ * Functions works as follows:
+ *  checks in the localStorage if there is an key with the name favorites 
+ *      if it has a key with called 'favourites' then put them in the variable 
+ *      'favoriteItems' and then JSON.Parse that variable into favorites 
+ *          then check if there is already the same value in the localStorage 
+ *              if it has the same value then splice it (remove it from the array) and then push everything back into localStorage. 
+ */
+
 function saveFavorite(item) {
     if (localStorage.getItem('favorites') !== null) {
         let favoriteItems = localStorage.getItem('favorites');
@@ -158,20 +179,19 @@ function saveFavorite(item) {
                 let favoriteIndex = favorites.indexOf(item);
                 favorites.splice(favoriteIndex, 1);
                 localStorage.setItem('favorites', JSON.stringify(favorites));
-                favorite.classList.remove('fa-solid');
-                favorite.classList.add('fa-regular');
 
             }else{
                 favorites.push(item);
-                console.log(favorites);
                 localStorage.setItem('favorites', JSON.stringify(favorites));
-                favorite.classList.remove('fa-regular');
-                favorite.classList.add('fa-solid');
+       
             }
     } else {
         localStorage.setItem('favorites', JSON.stringify(favorites));
     }
 }
+
+
+
 
 function fillDialog(data){
     detailContent.innerHTML = '';
@@ -281,6 +301,8 @@ function detailCloseHandler() {
 }
 
 
+
+
 //Error function
 function ajaxErrorHandler(data){
     let error = document.createElement('div');
@@ -288,3 +310,46 @@ function ajaxErrorHandler(data){
     error.innerText = "Op het moment kunnen de reviews niet geladen worden, probeer het later opnieuw"
     allReviews.before(error);
 }
+
+let prevValue = localStorage.getItem('favorites');
+
+// Set up a function to check for changes to the key
+function checkLocalStorage() {
+  // Get the current value of the key
+  let currValue = localStorage.getItem('favorites');
+  // Compare the current value to the previous value
+  if (currValue !== prevValue) {
+    
+    eventLocalStorage = JSON.parse(localStorage.getItem('favorites'));
+
+
+    
+    for (let index = 0; index < eventLocalStorage.length; index++) {
+       document.querySelector(`[data-id="${eventLocalStorage[index]}"]`).classList.add('fa-solid')
+    }
+    prevValue = currValue;
+  }
+}
+
+// Call the checkLocalStorage() function every 1 second
+setInterval(checkLocalStorage, 50);
+
+//  this needs to be reworked
+//  checks all the span element with data-id and then first removes all fa solid and then readds them 
+//  issue with this memory leak
+setInterval(() => {
+    let elements = document.querySelectorAll('span[data-id]');
+    eventLocalStorage = JSON.parse(localStorage.getItem('favorites'));
+
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].classList.remove('fa-solid');
+        elements[i].classList.add('fa-regular');
+    }
+
+    for (let index = 0; index < eventLocalStorage.length; index++) {
+        document.querySelector(`[data-id="${eventLocalStorage[index]}"]`).classList.remove('fa-solid')
+       if(document.querySelector(`[data-id="${eventLocalStorage[index]}"]`).dataset.id == eventLocalStorage[index]){
+        document.querySelector(`[data-id="${eventLocalStorage[index]}"]`).classList.add('fa-solid')
+       } 
+    }
+}, 100);
