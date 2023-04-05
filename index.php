@@ -20,7 +20,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
-    <title>Rolstoel</title>
+    <title>Handitransport Homepagina</title>
 </head>
 
 <body class="">
@@ -33,9 +33,9 @@
             <!-- <img class="mx-auto mt-40 " src="https://picsum.photos/seed/picsum/1200/300" alt="" srcset=""> -->
             <div class="swiper mySwiper ">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img class="mx-auto mt-40 " src="https://picsum.photos/seed/picsum/1200/400" alt="" srcset=""></div>
-                    <div class="swiper-slide"><img class="mx-auto mt-40 " src="https://picsum.photos/seed/picsum/1200/400" alt="" srcset=""></div>
-                    <div class="swiper-slide"><img class="mx-auto mt-40 " src="https://picsum.photos/seed/picsum/1200/400" alt="" srcset=""></div>
+                    <div class="swiper-slide"><img class="mx-auto mt-40 " src="images/rolstoel3.jpg" alt="" srcset=""></div>
+                    <div class="swiper-slide"><img class="mx-auto mt-40 " src="images/rolstoel2.jpg" alt="" srcset=""></div>
+                    <div class="swiper-slide"><img class="mx-auto mt-40 " src="images/rolstoel1.jpg" alt="" srcset=""></div>
                 </div>
                 <div class="swiper-button-next mt-12"></div>
                 <div class="swiper-button-prev mt-12"></div>
