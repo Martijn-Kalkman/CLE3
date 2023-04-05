@@ -9,6 +9,7 @@ let reviewDetails;
 let detailContent;
 let favorites = [];
 let favorite;
+let average2;
 
 let prevValue = localStorage.getItem('favorites');
 let eventLocalStorage = [];
@@ -216,7 +217,7 @@ function average(data){
             sum += data.results[i].rating;
         }
         let average = Math.round(sum / data.count);
-        let average2 = sum/data.count;
+       average2 = sum/data.count;
 
     let div = document.createElement('div');
     div.classList.add('averageofreviews', 'p-6', 'bg-white', 'border', 'border-gray-200', 'rounded-lg', 'shadow', 'dark:bg-gray-700', 'dark:border-gray-700');

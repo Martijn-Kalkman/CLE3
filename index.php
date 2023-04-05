@@ -39,7 +39,7 @@
                     <img class="mx-auto mt-40 h-96 w-full object-cover" src="images/rolstoel2.jpg" alt="" srcset="">
                 </div>
                 <div class="swiper-slide">
-                    <img class="mx-auto mt-40 h-96 w-full object-cover" src="images/rolstoel1.jpg" alt="" srcset="">
+                    <img class="mx-auto mt-40 h-96 w-full object-cover" src="images/rolstoel4.jpg" alt="" srcset="">
                 </div>
             </div>
             <div class="swiper-button-next mt-12"></div>
